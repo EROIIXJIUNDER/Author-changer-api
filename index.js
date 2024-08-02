@@ -11,6 +11,10 @@ app.use(bodyParser.json());
 
 // Path to the file where the author name is stored
 const authorFilePath = path.join(__dirname, 'author.json');
+//
+app.get('/', (req, res) => {
+    res.send('Service is live (:');
+});
 
 // Get the current author name
 app.get('/author', (req, res) => {
