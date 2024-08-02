@@ -13,7 +13,7 @@ app.use(bodyParser.json());
 const authorFilePath = path.join(__dirname, 'author.json');
 //
 app.get('/', (req, res) => {
-    res.send('Service is live (:');
+    res.send(' Service is live...');
 });
 
 // Get the current author name
@@ -24,8 +24,7 @@ app.get('/author', (req, res) => {
         }
         res.json({ author: JSON.parse(data).author });
     });
-});
-
+}); 
 // Update the author name
 app.post('/author', (req, res) => {
     const newAuthor = req.body.author;
